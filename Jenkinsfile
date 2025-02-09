@@ -1,5 +1,8 @@
 pipeline {
+    //TODO: configure agent with npm
     agent any
+
+    tools {nodejs "nodejs"}
 
     environment {
         // AWS_ACCOUNT_ID = 'your-account-id'
@@ -10,12 +13,12 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                echo '👀 Checking out code...'
-                checkout scm
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         echo '👀 Checking out code...'
+        //         checkout scm
+        //     }
+        // }
 
         stage('Install Dependencies') {
             steps {
